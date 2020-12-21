@@ -1,0 +1,13 @@
+os: linux
+language: node_js
+cache:
+  npm: false
+node_js:
+  - '11'
+install:
+  - rm -rf symbol-news/
+  - git clone https://github.com/nemgrouplimited/symbol-news.git
+script: 
+  - bash ./scripts/updateNewsXML.sh
+after_script:
+   - bash ./scripts/pushUpdates.sh
