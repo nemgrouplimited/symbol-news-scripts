@@ -7,18 +7,15 @@ setup_git() {
   git config receive.denyNonFastForwards false
 }
 commit_website_files() {
-  cat index.html
   git remote add origin-pages https://${GITHUB_TOKEN}@${NEWS_REPO_REF} > /dev/null 2>&1
   git remote update
   git checkout gh-pages
-  cat index.html
   git add . *.html
   git commit -m "Travis Build:  $TRAVIS_BUILD_NUMBER" --allow-empty 
 }
 
 upload_files() {
   git push  --set-upstream origin-pages gh-pages -f
-  # git push --quiet  origin-pages :gh-pages  -f
 }
 setup_git
 commit_website_files
