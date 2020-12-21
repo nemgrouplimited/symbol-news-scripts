@@ -2,4 +2,4 @@
  Containing Scripts
 
 ### Travis Build
-https://travis-ci.com/dev-vibes/symbol-news-scripts.svg?branch=main
+[![Build Status](https://travis-ci.com/dev-vibes/symbol-news-scripts.svg?branch=main)](https://travis-ci.com/dev-vibes/symbol-news-scripts)
