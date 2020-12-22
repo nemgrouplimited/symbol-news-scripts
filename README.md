@@ -7,6 +7,6 @@ A Travis CronJob that runs on a daily basis to refresh RSS Feeds for [symbol-wal
 The [symbol-wallet](https://github.com/nemgrouplimited/symbol-desktop-wallet) uses [rssmix aggregator](http://www.rssmix.com/) as the main resource for building news feeds in the app. Since rssmix doesn't support HTTPS protocol but, only HTTP which could lead to a Potential Content Spoofing vulnerability. We decided to host the xml-content returned from the aggregator on [github-page](https://nemgrouplimited.github.io/symbol-news/) then consume it from wallet over HTTPS to avoid MiTM attacks and responses manipulation.
 
 ### How it functions?
-1. First thing it clones [symbol-news repository](https://github.com/nemgrouplimited/symbol-news) which has index.html file containing xml-content from previous build.
-2. then executes [./updateNewsXMLUpdate.sh](https://github.com/dev-vibes/symbol-news-scripts/blob/main/scripts/pushUpdates.sh) script that updates hosted file content with latest [rss-feeds](http://rssmix.com/u/11801188/rss.xml) from rssmix.
-3. finally executest [./pushUpdates.sh](https://github.com/dev-vibes/symbol-news-scripts/blob/main/scripts/pushUpdates.shre-push) to push back updates [symbol-news](https://github.com/nemgrouplimited/symbol-news) to host latest updates on Github Pages.
+1. First thing it clones [symbol-news repository](https://github.com/nemgrouplimited/symbol-news) which contains xml-content for news from previous build.
+2. then executes [./updateNewsXMLUpdate.sh](https://github.com/dev-vibes/symbol-news-scripts/blob/main/scripts/updateNewsXML.sh) script that updates file content with latest [rss-feeds](http://rssmix.com/u/11801188/rss.xml) from rssmix.
+3. finally executes [./pushUpdates.sh](https://github.com/dev-vibes/symbol-news-scripts/blob/main/scripts/pushUpdates.sh) to push back updates [symbol-news](https://github.com/nemgrouplimited/symbol-news) to host latest updates on Github Pages.
