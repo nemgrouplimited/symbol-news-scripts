@@ -14,7 +14,7 @@ commit_updates() {
   git commit -m "Travis Build:  $TRAVIS_BUILD_NUMBER" --allow-empty 
 }
 
-oush_updates() {
+push_updates() {
   git push  --set-upstream origin-pages gh-pages -f
 }
 setup_git

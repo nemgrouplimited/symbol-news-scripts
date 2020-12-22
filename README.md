@@ -1,5 +1,5 @@
 # symbol-news-scripts
-## [![Build Status](https://travis-ci.com/dev-vibes/symbol-news-scripts.svg?branch=main)](https://travis-ci.com/dev-vibes/symbol-news-scripts)
+## [![Build Status](https://travis-ci.com/nemgrouplimited/symbol-news-scripts.svg?branch=main)](https://travis-ci.com/dev-vibes/symbol-news-scripts)
 
 A Travis CronJob that runs on a daily basis to refresh RSS Feeds for [symbol-wallet](https://github.com/nemgrouplimited/symbol-desktop-wallet) news page.
 
